@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        var numero1 = 50;
+        var numero2 = 100;
+        console.log(numero1);
+
+        numero1 = 10;
+        console.log(numero1);
+
+        var cadena1 = "cadena 1";
+
+        let numero3 = 200;
+        let cadena2 = 'Cadena numero 2';
+        //let cadena3 = 'La variable numero 2 --> numero2'; (por ahora no utilizarlo)
+
+        //Variables Booleanas
+        let falso = false;
+        let verdadero = true;
+
+        numero2 = 'Cambiar a cadena de caracteres';
+        cadena1 = 250;
+        numero3 = numero1 + numero2; //50Cambiar a cadena de caracteres
+
+        //cuando definimos una variable vamos a intentar no modificar su tipo de dato (aunque se puede)
+
+        console.log(numero3); //mostramos el contenido de una variable en la consola del navegador
+        
+
+        var vector = [10,20,30,40,50] //indice en este caso = 4
+        //indice = cantidad de elementos - 1
+        console.log(vector[0])  //para exederlos-mostrarlos 
+        console.log(vector[1]) //decirle a mi vector cual es el indice al que quiero acceder
+        console.log(vector[2])
+
+        //Si quiero modificar el valor de algun vector:
+        vector[0] = 250; 
+        vector[1] = 350;
+        vector[2] = 450;
+
+        console.log(vector[0])  
+        console.log(vector[1]) 
+        console.log(vector[2])
+
+        var variableNula = null;
+
+        console.log(typeof(variableNula));
+
+        var variableIndefinida; //aquella que tiene valor y no se sabe de que tipo va a ser, tipo indefinida
+        console.log(typeof(variableIndefinida))
+        */
+
+        let numero1 = 1;
+        let numero2 = 2;
+        
+        /*
+        console.log (numero1==1 && numero2 ==2);
+
+        console.log( numero1==1 && numero2 >2);
+
+        console.log( numero1>1 && numero2 ==2);
+
+        console.log( numero1>1 && numero2 >2);
+
+
+        console.log( numero1==1 || numero2 ==2);
+
+        console.log( numero1==1 || numero2 >2);
+        
+        console.log( numero1>1 || numero2 ==2);
+
+        console.log( numero1>1 || numero2 >2);
+        */
+/*
+        //Condicion por la positiva:
+        if(numero2==2){
+            console.log("La Variable numero2 tiene el valor 2");
+        }
+
+        if(numero2>2){
+            console.log("Este mensaje no deberia mostrarse en pantalla");
+        }
+
+        //Condicion por la negativa: se usa ej si persoa no es trabajadora, no tiene nro cuit, no tiene mail cargado La negacion se utiliza mucho para las condiciones NEGATIVO NO SIGNIFICA FALSO
+        if(! (numero2>2) ){
+            console.log("La Variable numero2 No es mayor a 2");
+        }
+
+
+
+        if(numero2==2){
+            console.log("La Variable numero2 tiene el valor 2"); //donde la condicion es verdadera ingresa al bloque IF
+        }else{
+            console.log("La Variable numero2 No es igual a 2");
+        }
+
+        if(numero2>2){
+            console.log("La Variable numero2 tiene el valor 2"); //si la condicion es falsa ingresa al bloque ELSE, nunca las 2 juntas, una o la otra
+        }else{
+            console.log("La Variable numero2 No es igual a 2");
+        }
+
+        numero1 = 10;
+        switch(numero1){
+            case 1:
+                console.log("lunes");
+                break; //todas las demas no se van a evaluar y sale del switch
+            case 2:
+                console.log("martes");
+                break;
+            case 3:
+                console.log("miercoles");
+                break;
+            case 5:
+                console.log("Jueves o viernes");
+                break;
+            default: //cuando no se ejecuta ninguno de los casos va a la opcion default, si no tengo default se termina el script y no agrega ningun mensaje, SIEMPRE al final, en JS no es obligatorio
+                console.log("no es un dia seleccionable")
+
+        }
+        //swich de multiples cases con mismo codigo
+        switch(mes){
+            case 1:
+            case 3:
+            case 5:
+                console.log("El mes tiene 31 dias")
+            case 4:
+            case 6:
+            case 9:
+                console.log("El mes tiene 30 dias") 
+        }
+
+*/
+
+        //ESTRUCTURAS REPETITIVAS:
+/*
+        let i = 0;
+        let texto = ""; //tipo string
+        
+        while(i<10){
+            texto += "<br> El numero es" + i; // es lo mismo que decir: texto = texto + "<br> El numero es" + i;
+            i++;          
+        }
+
+        let j = 0;
+        let texto = "";
+
+        for(let j= 0; j<10 ; j++){
+            texto += "<br> El numero es" + j;
+            
+        }
+
+        while(true) { //cuando dependo de un evento 3ro que pasa en el medio
+            //mi codigo
+        } 
+
+
+        document.getElementById("demo").innerHTML = texto;
+*/
+
+        function MultiplicarValores(a, b){
+            return a * b; //devolviendo el resultado de la multiplicacion
+
+        }
+
+        function RestarValores(a,b){
+            return a-b;
+        }
+
+        console.log(MultiplicarValores(4,5));
+
+        console.log(MultiplicarValores(10,25));
+        console.log(MultiplicarValores());
+        
+        console.log(RestarValores(4,5));
+        console.log(RestarValores(5,4));
+        
+        </script>
+</head>
+<body>
+
+    <p id="demo">Texto Original</p>
+
+    <button onclick="document.getElementById('demo').innerHTML = 'Nuevo Texto'">Cambiar el texto</button>
+    
+</body>
+</html>
