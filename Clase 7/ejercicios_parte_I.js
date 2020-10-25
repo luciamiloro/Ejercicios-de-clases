@@ -50,9 +50,9 @@ function mayorQue (){
     if (input1 == input2){
         document.getElementById('visorResultado').innerHTML="<h1> son iguales </h1>"
     }else if(input1 > input2){
-        document.getElementById('visorResultado').innerHTML="<h1> El nro " +input1+ " es mas grande </h1>"
+        document.getElementById('visorResultado').innerHTML="<h1> El nro " +input1+ " es mayor </h1>"
     }else{
-        document.getElementById('visorResultado').innerHTML="<h1>El nro " +input2+ " es mas grande</h1>"
+        document.getElementById('visorResultado').innerHTML="<h1>El nro " +input2+ " es mayor</h1>"
     }
 }
 
@@ -70,7 +70,11 @@ function concatenar (){
 
 
 function calcularDescuento(monto, medioPago){
-   
+    let nuevoMonto = 0;
+    const EFECTIVO = 'E';
+    const DEBITO = 'D';
+    const CREDITO = 'C';
+
     let nuevoMonto = monto;
 
     if(monto <200){
@@ -99,8 +103,13 @@ function calcularDescuento(monto, medioPago){
  }
 
 }
-
+ 
 function visorDescuento(){ 
     let resultado = calcularDescuento(document.getElementById('monto').value ,document.getElementById('medioPago').value )
     document.getElementById('visorDescuento').innerHTML = "<p>"+ resultado +"</p>";
 }
+
+
+
+
+
