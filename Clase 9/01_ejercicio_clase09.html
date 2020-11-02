@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script >
+    //  $(document).ready(function(){
+    //  alert("El documento esta READY");
+    //  })
+    
+    $(function(){
+      alert("El documento esta READY");
+     $('#boton').click(function(){
+       $("#oculto").show(); //display = block 
+      // ni toggle ni after por ej responderian a la consigna
+      })
+   
+        let nuevoP = "<p>Este es el tercer P que se agrega mediante el boton </p>";
+
+        $("body").append(nuevoP);
+
+        //Ejercicio 4: armar los selectores para obtener
+        let todosLosDivs = $("div") //selecciono todos los tags divs de mi html
+
+        // todos los elementos con "mi clase"
+        let elementosMiClase = $(".miclase");
+
+        // todos los elementos que posean las clases "clase 1" y "clase2"
+        let elementoClase1 = $(".clase1"); //busca clase particular
+        let elementoClase2 = $(".clase2"); //busca clase particular
+        
+        let clases = $(".clase1 , .clase2"); //busca que contenga cualquiera de las 2
+        clases = $(".clase1.clase2"); // busca que contenga exactamente las 2
+
+        // todos los tags <p> que posean la clase "pAzul"
+          
+        // todos los tags <button> que posean id "boton1" y clase "claseSubmit"
+          let botones = $("button #boton1 .claseSubmit")
+      })
+   
+    </script>
+
+</head>
+<body class="miclase">
+    <button id="boton">Mostrar contenido oculto</button>
+    <p id="oculto" style="display: none;">Este es el contenido oculto</p>
+    
+    <button id="agregarAlFinal">Agregar tercer p</button>
+    <p class="miclase">primer p</p>
+    <p>segundo p</p>
+
+    <div class="clase1 clase2"></div>
+    <div class="clase2"></div>
+    <div class="miclase"></div>
+    <div class="miclase"></div>
+    <div class="clase1"></div>
+  
+    
+  </body>
+</html>
