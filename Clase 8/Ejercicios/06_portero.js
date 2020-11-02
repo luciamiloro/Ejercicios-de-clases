@@ -36,28 +36,42 @@ function PresionarBoton2(nroBoton){
 function ponerEnElPanelDePisoElNumeroQueMeDiste(elNumeroQueMeDiste){
     const resultado = document.getElementById("piso").innerHTML + elNumeroQueMeDiste
     //si el resultado es mas grande que tres digitos si no me sigo quedanto en el piso
-
-    if(resultado.length > 2 ){
-        document.getElementById("dpto").innerHTML = elNumeroQueMeDiste;
+    if(resultado.length <= 2){
+        // Los pisos se identifican con los valores del 00 al 48
+        if(parseFloat(resultado) <= 48){
+            document.getElementById("piso").innerHTML = resultado;
+        }else{
+           
+            document.getElementById("panelDeTexto").innerHTML = "el piso " + resultado + " no existe";
+        }
     }else{
-        document.getElementById("piso").innerHTML = resultado;
-
+         //Los departamentos van del 1 al 6
+         if(elNumeroQueMeDiste <= 6){
+            document.getElementById("dpto").innerHTML = elNumeroQueMeDiste; 
+         }else{
+            document.getElementById("panelDeTexto").innerHTML = "el depto " + elNumeroQueMeDiste + " no existe";
+         }
+        
     }
-
-   // Los pisos se identifican con los valores del 00 al 48
-
-   
-   //Los departamentos van del 1 al 6
 }
 
 function llamar(){
-    // si la pantalla de piso y dpto estan completas llamo al piso si no estan completas alunas de las dos pantallas tiro error
+
+    //si 
+    //el panel de dpto no tiene nada
+    document.getElementById("dpto").innerHTML !== "" 
+
+    //se cumple lo llamo si no aviso que falta completar datos
+
+
+    document.getElementById("panelDeTexto").innerHTML = "llamando";
+}
+
+function borrar(){
+    document.getElementById("piso").innerHTML = ""
+    document.getElementById("dpto").innerHTML = ""
+    document.getElementById("panelDeTexto").innerHTML = ""
     
-
-}
-
-function llamar(){
-    // borro todo lo que estan en las pantallas
 
 }
 
